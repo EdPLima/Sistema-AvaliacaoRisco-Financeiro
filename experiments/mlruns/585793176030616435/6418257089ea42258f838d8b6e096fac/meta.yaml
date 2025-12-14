@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/6418257089ea42258f838d8b6e096fac/artifacts
+end_time: 1765571898397
+entry_point_name: ''
+experiment_id: '585793176030616435'
+lifecycle_stage: active
+run_id: 6418257089ea42258f838d8b6e096fac
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765571894400
+status: 3
+tags: []
+user_id: eduar

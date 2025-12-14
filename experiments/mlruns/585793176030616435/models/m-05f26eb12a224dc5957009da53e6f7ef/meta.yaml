@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/models/m-05f26eb12a224dc5957009da53e6f7ef/artifacts
+creation_timestamp: 1765571885639
+experiment_id: '585793176030616435'
+last_updated_timestamp: 1765571889278
+model_id: m-05f26eb12a224dc5957009da53e6f7ef
+model_type: null
+name: model
+source_run_id: 8efc4ef4de924d76b2574fac4b68701b
+status: 2
+status_message: null

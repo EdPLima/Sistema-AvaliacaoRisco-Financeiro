@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/8efc4ef4de924d76b2574fac4b68701b/artifacts
+end_time: 1765571889296
+entry_point_name: ''
+experiment_id: '585793176030616435'
+lifecycle_stage: active
+run_id: 8efc4ef4de924d76b2574fac4b68701b
+run_name: LightGBM
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765571883574
+status: 3
+tags: []
+user_id: eduar

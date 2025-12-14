@@ -1,0 +1,40 @@
+artifact_path: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/models/m-8cc250368d3648c7a28f5d78c8361794/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.2
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-8cc250368d3648c7a28f5d78c8361794
+model_size_bytes: 2135285
+model_uuid: m-8cc250368d3648c7a28f5d78c8361794
+prompts: null
+run_id: 636dab0854e94e208e2bbb828abaf99b
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "person_income", "required": true}, {"type":
+    "double", "name": "person_emp_length", "required": true}, {"type": "double", "name":
+    "loan_amnt", "required": true}, {"type": "double", "name": "loan_int_rate", "required":
+    true}, {"type": "double", "name": "loan_percent_income", "required": true}, {"type":
+    "double", "name": "cb_person_cred_hist_length", "required": true}, {"type": "double",
+    "name": "person_home_ownership", "required": true}, {"type": "double", "name":
+    "loan_intent", "required": true}, {"type": "double", "name": "loan_grade", "required":
+    true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-12 21:08:04.179987'
