@@ -9,7 +9,7 @@ Desenvolver um modelo de machine learning para prever a probabilidade de default
 ### Estrutura de Diretórios
 
 ```
-risco_ml/
+SISTENA-AVALIACAORISCO-FINANCEIRO/
 ├── app/                           # Novo nome para streamlit_app/ (template)
 │   └── streamlit_app.py                     # Aplicação web para fazer predições
 │
