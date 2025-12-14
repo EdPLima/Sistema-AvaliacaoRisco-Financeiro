@@ -1,4 +1,4 @@
-# Risco ML - Sistema de Avaliação de Risco de Crédito
+# Sistema de Avaliação de Risco de Crédito
 
 ## Objetivo do Projeto
 
