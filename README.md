@@ -222,7 +222,3 @@ Melhorias futuras podem incluir:
 - Utilização do docker
 - Deploy na AWS
 - Implementar testes unitários
-
-## Contato e Suporte
-
-Para dúvidas ou sugestões sobre o projeto, consulte os notebooks ou a documentação em DEPLOYMENT.md.
