@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 # Sistema de Avaliação de Risco de Crédito
-=======
+
 # Risco ML - Sistema de Avaliação de Risco de Crédito 💳📊
->>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
 
 ## 🎯 Objetivo do Projeto
 
@@ -278,7 +277,5 @@ Melhorias futuras podem incluir:
 - Utilização do docker
 - Deploy na AWS
 - Implementar testes unitários
-<<<<<<< HEAD
-=======
 
 >>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
