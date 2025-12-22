@@ -1,26 +1,40 @@
+<<<<<<< HEAD
 # Sistema de Avaliação de Risco de Crédito
+=======
+# Risco ML - Sistema de Avaliação de Risco de Crédito 💳📊
+>>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
 
-## Objetivo do Projeto
+## 🎯 Objetivo do Projeto
 
-Desenvolver um modelo de machine learning para prever a probabilidade de default em empréstimos pessoais. O sistema permite classificar novos clientes em categorias de risco (alto/baixo) com base em características financeiras e históricas.
+Desenvolver um modelo de machine learning para prever a probabilidade de **default** em empréstimos pessoais.  
+O sistema permite classificar novos clientes em categorias de risco (**alto/baixo**) com base em características financeiras e históricas.
 
-## Arquitetura e Organização
+## 🏗️ Arquitetura e Organização
 
 ### Estrutura de Diretórios
 
+
+
 ```
+<<<<<<< HEAD
 SISTENA-AVALIACAORISCO-FINANCEIRO/
 ├── app/                           # Novo nome para streamlit_app/ (template)
 │   └── streamlit_app.py                     # Aplicação web para fazer predições
+=======
+SISTEMA-AVALIACAORISCO-FINANCEIRO/
+├── app/
+│   └── streamlit_app.py
+>>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
 │
-├── configs/                       # Arquivos de configuração (YAML, JSON, etc.)
+├── configs/
+ (YAML, JSON, etc.)
 │
 ├── data/
 │   ├── raw/
-│   │   └── credit_risk_dataset.csv # Dataset original
+│   │   └── credit_risk_dataset.csv
 │   │
 │   ├── interim/
-│   │   └── dados_novos.csv        # Dados para predição
+│   │   └── dados_novos.csv
 │   │
 │   ├── processed/
 │   │   ├── X_train.pkl
@@ -29,7 +43,8 @@ SISTENA-AVALIACAORISCO-FINANCEIRO/
 │   │   └── y_test.pkl
 │   │
 │   └── scalers/
-│       └── feature_scalers.pkl    # Transformadores salvos do treinamento
+│       └── feature_scalers.pkl
+treinamento
 │
 ├── experiments/
 │   ├── mlruns/                    # Histórico de execuções do MLflow
@@ -69,7 +84,10 @@ SISTENA-AVALIACAORISCO-FINANCEIRO/
 └── README.md                      # Documentação do projeto
 ```
 
-## Fluxo de Dados
+
+## 🔄 Fluxo de Dados
+
+
 
 ```
 Dataset Bruto (data/raw/)
@@ -87,37 +105,39 @@ Feature Store + Modelo (em produção)
 Aplicação Streamlit (Interface para Usuários)
 ```
 
-## Tecnologias Utilizadas
+
+## 🛠️ Tecnologias Utilizadas
 
 ### Processamento de Dados
-- **pandas**: Manipulação e análise de dados
-- **numpy**: Operações numéricas
-- **scikit-learn**: Preprocessamento, feature engineering e métricas
+- **pandas** 🐼: Manipulação e análise de dados
+- **numpy** 🔢: Operações numéricas
+- **scikit-learn** 🧠: Preprocessamento e métricas
 
 ### Modelagem
-- **scikit-learn**: RandomForest, LogisticRegression, KNN, MLP
-- **xgboost**: Gradient Boosting
-- **lightgbm**: Light Gradient Boosting Machine (modelo final)
-- **optuna**: Otimização de hiperparâmetros
+- **RandomForest, LogisticRegression, KNN, MLP** 🌳
+- **xgboost** ⚡
+- **lightgbm** 💡 (modelo final)
+- **optuna** 🎯: Otimização de hiperparâmetros
 
 ### MLOps e Tracking
-- **mlflow**: Registro e versionamento de modelos
+- **mlflow** 📋: Registro e versionamento de modelos
 
 ### Visualização
-- **matplotlib**: Gráficos estáticos
-- **seaborn**: Visualizações estatísticas
-- **plotly**: Gráficos interativos
-- **shap**: Explicabilidade do modelo
+- **matplotlib** 📈
+- **seaborn** 📊
+- **plotly** 🌐
+- **shap** 🔍: Explicabilidade do modelo
 
 ### Interface Web
-- **streamlit**: Aplicação web para predições
+- **streamlit** 💻: Aplicação web para predições
 
-## Como Usar
+## 🚀 Como Usar
 
 ### Instalação de Dependências
 
 ```bash
 pip install -e .
+
 ```
 
 Todas as dependências estão definidas em `pyproject.toml`.
@@ -149,12 +169,48 @@ O modelo LightGBM é otimizado com Optuna e promovido para Production.
 
 ## Configuração do MLflow
 
-O projeto utiliza MLflow para tracking de experimentos e registro de modelos:
+O projeto utiliza MLflow para tracking de experimentos e registro de modelos.
+
+Opções para abrir a interface do MLflow (portável):
+
+- Usando caminho relativo (execute a partir da raiz do projeto):
 
 ```bash
-# Abrir interface do MLflow
-mlflow ui --backend-store-uri experiments/
+# roda o UI apontando para experiments/mlruns na raiz do projeto
+mlflow ui --backend-store-uri file:experiments/mlruns --default-artifact-root file:experiments/mlruns
 ```
+
+- Usando variável de ambiente (sessão ou permanente) — após setar `MLFLOW_TRACKING_URI` basta executar `mlflow ui`:
+
+CMD (temporário na sessão):
+```cmd
+set MLFLOW_TRACKING_URI=file:///C:/caminho/para/o/projeto/experiments/mlruns
+mlflow ui
+```
+
+PowerShell (temporário na sessão):
+```powershell
+$env:MLFLOW_TRACKING_URI = 'file:///C:/caminho/para/o/projeto/experiments/mlruns'
+mlflow ui
+```
+
+Para setar permanentemente (Windows):
+```cmd
+setx MLFLOW_TRACKING_URI "file:///C:/caminho/para/o/projeto/experiments/mlruns"
+```
+
+- Script automatizado (recomendado): existe um script PowerShell em `scripts/start-mlflow.ps1` que resolve o caminho do repositório automaticamente e inicia o UI sem precisar editar caminhos pessoais.
+
+Exemplo de uso (PowerShell, a partir da raiz do repo):
+```powershell
+# executa o script que monta a URI dinamicamente
+.\scripts\start-mlflow.ps1
+```
+
+Observações:
+- Se você configurar `MLFLOW_TRACKING_URI` na sua sessão, execute o `mlflow ui` no mesmo terminal onde a variável foi definida.
+- Se o UI mostrar experimentos vazios mesmo com arquivos em `experiments/mlruns`, verifique/remova a variável `MLFLOW_TRACKING_URI` e reinicie o `mlflow ui` no terminal correto.
+
 
 Acesse em `http://localhost:5000` para visualizar:
 - Todos os experimentos executados
@@ -222,3 +278,7 @@ Melhorias futuras podem incluir:
 - Utilização do docker
 - Deploy na AWS
 - Implementar testes unitários
+<<<<<<< HEAD
+=======
+
+>>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)

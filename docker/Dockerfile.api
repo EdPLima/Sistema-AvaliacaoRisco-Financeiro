@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# system deps that may be needed to build some packages (adjust if heavy builds fail)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    git \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy project
+COPY . /app
+
+# Instala dependências a partir do pyproject.toml (editable)
+RUN pip install --upgrade pip \
+    && pip install -e .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "src.api.predict:app", "--host", "0.0.0.0", "--port", "8000"]

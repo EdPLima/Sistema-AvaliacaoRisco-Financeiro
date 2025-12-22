@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+
+# Mlflow
+  mlflow:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mlflow
+    container_name: risco_ml_mlflow
+    volumes:
+      - ./experiments:/app/experiments
+    ports:
+      - "5000:5000"
+    environment:
+      - MLFLOW_TRACKING_URI=file:///app/experiments/mlruns
+    restart: unless-stopped
+
+# API FastAPI
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    container_name: risco_ml_api
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=file:///app/experiments/mlruns
+    depends_on:
+      - mlflow
+    restart: unless-stopped
+
+# Streamlit App
+  streamlit:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.streamlit
+    container_name: risco_ml_streamlit
+    volumes:
+      - ./:/app
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+      - MLFLOW_TRACKING_URI=file:///app/experiments/mlruns
+    depends_on:
+      - api
+    restart: unless-stopped
