@@ -1,6 +1,5 @@
-# Sistema de Avaliação de Risco de Crédito
 
-# Risco ML - Sistema de Avaliação de Risco de Crédito 💳📊
+# Sistema de Avaliação de Risco de Crédito 💳📊
 
 ## 🎯 Objetivo do Projeto
 
@@ -150,10 +149,9 @@ Durante o treinamento, os seguintes modelos são avaliados:
 
 - RandomForestClassifier
 - XGBClassifier
-- LGBMClassifier (melhor performance)
-- KNeighborsClassifier
+- LGBMClassifier
 - LogisticRegression
-- MLPClassifier
+
 
 O modelo LightGBM é otimizado com Optuna e promovido para Production.
 
@@ -266,5 +264,4 @@ Para fazer predições, os dados devem conter as seguintes colunas:
 Melhorias futuras podem incluir:
 
 - Deploy na AWS
-- Implementar testes unitários para todos os módulos
 
