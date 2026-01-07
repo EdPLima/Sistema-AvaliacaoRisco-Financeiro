@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/Sistema-AvaliacaoRisco-Financeiro/experiments/mlruns/351398007571633547/models/m-ae223935d4da464fb093e37f830ecfe3/artifacts
+creation_timestamp: 1766760908382
+experiment_id: '351398007571633547'
+last_updated_timestamp: 1766760916391
+model_id: m-ae223935d4da464fb093e37f830ecfe3
+model_type: null
+name: shivering-zebra-866
+source_run_id: d437ccf680a1420789814857c1977a5f
+status: 2
+status_message: null

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # Sistema de Avaliação de Risco de Crédito
-=======
+
 # Risco ML - Sistema de Avaliação de Risco de Crédito 💳📊
->>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
 
 ## 🎯 Objetivo do Projeto
 
@@ -13,21 +11,18 @@ O sistema permite classificar novos clientes em categorias de risco (**alto/baix
 
 ### Estrutura de Diretórios
 
-
-
 ```
-<<<<<<< HEAD
+
 SISTENA-AVALIACAORISCO-FINANCEIRO/
-├── app/                           # Novo nome para streamlit_app/ (template)
+├── app/
 │   └── streamlit_app.py                     # Aplicação web para fazer predições
 =======
 SISTEMA-AVALIACAORISCO-FINANCEIRO/
 ├── app/
 │   └── streamlit_app.py
->>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)
 │
 ├── configs/
- (YAML, JSON, etc.)
+|
 │
 ├── data/
 │   ├── raw/
@@ -64,11 +59,7 @@ treinamento
 │   │   ├── modelo_producao.py     # Interface para carregar modelo do MLflow
 │   │   └── __init__.py
 │   │
-│   ├── pipeline/
-│   │   ├── engenharia_atributos.py# Funções de feature engineering
-│   │   ├── preprocessamento_dados.py# Funções de preprocessamento
-│   │   ├── production_pipeline.py # Pipeline de produção
-│   │   └── __init__.py
+│   |
 │   │
 │   ├── utils/
 │   │   ├── paths.py               # Gerenciamento de caminhos do projeto
@@ -104,7 +95,6 @@ Feature Store + Modelo (em produção)
     ↓
 Aplicação Streamlit (Interface para Usuários)
 ```
-
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -275,10 +265,6 @@ Para fazer predições, os dados devem conter as seguintes colunas:
 
 Melhorias futuras podem incluir:
 
-- Utilização do docker
 - Deploy na AWS
-- Implementar testes unitários
-<<<<<<< HEAD
-=======
+- Implementar testes unitários para todos os módulos
 
->>>>>>> 69ddf42 (Criacao dos módulos para chamada do modelo e primeira versao do main.py)

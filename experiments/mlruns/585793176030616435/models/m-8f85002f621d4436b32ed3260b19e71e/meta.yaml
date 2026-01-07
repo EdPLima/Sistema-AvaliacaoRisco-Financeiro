@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/models/m-8f85002f621d4436b32ed3260b19e71e/artifacts
+creation_timestamp: 1766760896301
+experiment_id: '585793176030616435'
+last_updated_timestamp: 1766760903496
+model_id: m-8f85002f621d4436b32ed3260b19e71e
+model_type: null
+name: lgb_model
+source_run_id: f54feabf52a7442997cfd91c53591dee
+status: 2
+status_message: null

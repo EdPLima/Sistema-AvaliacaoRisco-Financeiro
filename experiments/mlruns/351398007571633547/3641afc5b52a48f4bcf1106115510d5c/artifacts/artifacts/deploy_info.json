@@ -1,0 +1,39 @@
+{
+  "model_name": "lgb_prob_default",
+  "model_type": "LightGBM",
+  "features": [
+    "person_income",
+    "person_emp_length",
+    "loan_amnt",
+    "loan_int_rate",
+    "loan_percent_income",
+    "cb_person_cred_hist_length",
+    "person_home_ownership",
+    "loan_intent",
+    "loan_grade"
+  ],
+  "threshold": 0.42000000000000004,
+  "metrics": {
+    "accuracy": 0.9193794154315003,
+    "precision": 0.8136826783114993,
+    "recall": 0.7742382271468145,
+    "f1": 0.7934705464868701,
+    "roc_auc": 0.9417630199901669,
+    "pr_auc": 0.8861268919367142,
+    "specificity": 0.9556709956709957
+  },
+  "hyperparameters": {
+    "n_estimators": 1451.0,
+    "max_depth": 6.0,
+    "learning_rate": 0.03509948305946465,
+    "num_leaves": 32.0,
+    "min_child_samples": 21.0,
+    "subsample": 0.6022760981257977,
+    "colsample_bytree": 0.8320620009921129,
+    "reg_alpha": 1.968790589987644,
+    "reg_lambda": 0.3756517337658575,
+    "min_split_gain": 0.20802180470145304,
+    "max_bin": 477.0,
+    "scale_pos_weight": 3.2291982028957875
+  }
+}

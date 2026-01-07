@@ -1,7 +1,8 @@
-aliases: {}
+aliases:
+  Production: '7'
 creation_timestamp: 1765573689078
 deployment_job_id: null
 deployment_job_state: null
 description: null
-last_updated_timestamp: 1765573689078
+last_updated_timestamp: 1766760917863
 name: lgb_prob_default

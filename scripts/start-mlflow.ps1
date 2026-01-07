@@ -7,7 +7,6 @@ param(
     [string]$Host = '127.0.0.1'
 )
 
-# Resolve repo root (assumes script is in scripts/ under repo root)
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 $mlrunsPath = Join-Path $repoRoot 'experiments\mlruns'
 
@@ -16,7 +15,6 @@ if (-not (Test-Path $mlrunsPath)) {
     exit 1
 }
 
-# Convert Windows path to file:/// URI (use forward slashes)
 $abs = (Resolve-Path $mlrunsPath).Path
 $uri = 'file:///' + ($abs -replace '\\','/')
 

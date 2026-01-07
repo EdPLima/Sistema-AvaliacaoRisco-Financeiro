@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/cc5f4296f0a242449944de90cf7d1d04/artifacts
+end_time: 1766760607924
+entry_point_name: ''
+experiment_id: '585793176030616435'
+lifecycle_stage: active
+run_id: cc5f4296f0a242449944de90cf7d1d04
+run_name: KNN
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766760601315
+status: 3
+tags: []
+user_id: eduar

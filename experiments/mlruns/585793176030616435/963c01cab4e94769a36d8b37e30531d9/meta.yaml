@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/risco_ml/experiments/mlruns/585793176030616435/963c01cab4e94769a36d8b37e30531d9/artifacts
+end_time: 1766759277126
+entry_point_name: ''
+experiment_id: '585793176030616435'
+lifecycle_stage: active
+run_id: 963c01cab4e94769a36d8b37e30531d9
+run_name: XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766759268972
+status: 3
+tags: []
+user_id: eduar

@@ -23,7 +23,7 @@ dependencies = [
     "statsmodels>=0.14.1",
 
     # ML Core
-    "scikit-learn>=1.4.0",
+    "scikit-learn==1.4.2",
     "xgboost>=2.0.3",
     "lightgbm>=4.3.0",
     "optuna>=3.5.0",
@@ -40,6 +40,7 @@ dependencies = [
     # API
     "fastapi>=0.111.0",
     "uvicorn>=0.30.0",
+    "requests>=2.31.0",
 
     # Dashboard / Front
     "streamlit>=1.36.0",

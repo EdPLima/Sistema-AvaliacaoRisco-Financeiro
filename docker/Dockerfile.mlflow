@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN pip install --upgrade pip
 
 COPY . /app
 
-# Instala dependências do projeto (inclui mlflow via pyproject)
+# Instala dependências do projeto e inclui mlflow via pyproject
 RUN pip install -e .
 
 EXPOSE 5000

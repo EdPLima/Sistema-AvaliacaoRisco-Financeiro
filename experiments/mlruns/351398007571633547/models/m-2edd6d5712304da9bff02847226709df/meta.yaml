@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/Sistema-AvaliacaoRisco-Financeiro/experiments/mlruns/351398007571633547/models/m-2edd6d5712304da9bff02847226709df/artifacts
+creation_timestamp: 1766759615629
+experiment_id: '351398007571633547'
+last_updated_timestamp: 1766759623487
+model_id: m-2edd6d5712304da9bff02847226709df
+model_type: null
+name: model
+source_run_id: 180fda52aac547ec925a3c9757c8432e
+status: 2
+status_message: null

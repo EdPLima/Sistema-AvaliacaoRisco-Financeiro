@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/Sistema-AvaliacaoRisco-Financeiro/experiments/mlruns/351398007571633547/d437ccf680a1420789814857c1977a5f/artifacts
+end_time: 1766760917933
+entry_point_name: ''
+experiment_id: '351398007571633547'
+lifecycle_stage: active
+run_id: d437ccf680a1420789814857c1977a5f
+run_name: LightGBM_Production_Ready
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1766760905849
+status: 3
+tags: []
+user_id: eduar

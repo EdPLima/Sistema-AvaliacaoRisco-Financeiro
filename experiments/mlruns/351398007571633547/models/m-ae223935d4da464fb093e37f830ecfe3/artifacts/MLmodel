@@ -1,0 +1,39 @@
+artifact_path: file:///C:/Users/eduar/OneDrive/Documentos/SandBox/Projetos/Sistema-AvaliacaoRisco-Financeiro/experiments/mlruns/351398007571633547/models/m-ae223935d4da464fb093e37f830ecfe3/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.pkl
+    lgb_version: 4.4.0
+    model_class: lightgbm.sklearn.LGBMClassifier
+  python_function:
+    data: model.pkl
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.11.7
+is_signature_from_type_hint: false
+mlflow_version: 3.3.2
+model_id: m-ae223935d4da464fb093e37f830ecfe3
+model_size_bytes: 2135280
+model_uuid: m-ae223935d4da464fb093e37f830ecfe3
+prompts: null
+run_id: d437ccf680a1420789814857c1977a5f
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "person_income", "required": true}, {"type":
+    "double", "name": "person_emp_length", "required": true}, {"type": "double", "name":
+    "loan_amnt", "required": true}, {"type": "double", "name": "loan_int_rate", "required":
+    true}, {"type": "double", "name": "loan_percent_income", "required": true}, {"type":
+    "double", "name": "cb_person_cred_hist_length", "required": true}, {"type": "double",
+    "name": "person_home_ownership", "required": true}, {"type": "double", "name":
+    "loan_intent", "required": true}, {"type": "double", "name": "loan_grade", "required":
+    true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-26 14:55:08.482401'

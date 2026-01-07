@@ -1,34 +1,34 @@
 import pandas as pd
 import numpy as np
-from typing import Union, Dict, Tuple
-from src.models.loader_model import ModeloProducao
-from features.feature_store import FeatureStore
+from typing import Union, Dict
+from src.models.predictor import ModelProducao
+from src.features.feature_store import FeatureStore
 
-
-def prever_risco(dados_entrada: Union[Dict, pd.DataFrame],threshold: float = 0.42) -> Dict:
-
+def prever_risco(dados_entrada: Union[Dict, pd.DataFrame], threshold: float = 0.42) -> Dict:
+    # Converter entrada para DataFrame
     if isinstance(dados_entrada, dict):
         df_input = pd.DataFrame([dados_entrada])
     else:
         df_input = dados_entrada.copy()
 
-    # Carregar e aplicar transformações de features
+    # Carregar FeatureStore
     feature_store = FeatureStore.load()
-    X_transformado = feature_store.transform(df_input)
 
-    # Carregar modelo de produção que tá no mlflow
-    modelo = ModeloProducao()
+    # Passo 1: transforma todas as features
+    X_full = feature_store.transform_all(df_input)
 
-    # Fazer predição de probabilidades
-    proba = modelo.predict_proba(X_transformado)
+    # Passo 2: seleciona apenas as features do RFECV
+    X_final = feature_store.select_features(X_full)
 
-    # Probabilidade da classe 1 que é a classe que o cara nao vai pagar
+    # Carregar modelo de produção
+    modelo = ModelProducao()
+    proba = modelo.predict_proba(X_final)
+
+    # Probabilidade da classe 1 (inadimplência)
     prob_default = proba[0, 1]
 
-    # Classificar em Alto/Baixo Risco com base no threshold
+    # Classificação
     classificacao = "Alto Risco" if prob_default >= threshold else "Baixo Risco"
-
-    # Calcular confiança - distância em relação ao threshold
     confianca = abs(prob_default - threshold)
 
     return {
@@ -38,20 +38,25 @@ def prever_risco(dados_entrada: Union[Dict, pd.DataFrame],threshold: float = 0.4
         'threshold_usado': threshold
     }
 
-def prever_risco_lote(dados_lote: pd.DataFrame,threshold: float = 0.42) -> pd.DataFrame:
 
-    # Transformar features
+def prever_risco_lote(dados_lote: pd.DataFrame, threshold: float = 0.42) -> pd.DataFrame:
+    df_input = dados_lote.copy()
+
+    # Carregar FeatureStore
     feature_store = FeatureStore.load()
-    X_transformado = feature_store.transform(dados_lote)
 
-    # Carregar modelo
-    modelo = ModeloProducao()
+    # Passo 1: transforma todas as features
+    X_full = feature_store.transform_all(df_input)
 
-    # Predição em lote
-    proba = modelo.predict_proba(X_transformado)
+    # Passo 2: seleciona apenas as features do RFECV
+    X_final = feature_store.select_features(X_full)
+
+    # Carregar modelo de produção
+    modelo = ModelProducao()
+    proba = modelo.predict_proba(X_final)
     prob_default = proba[:, 1]
 
-    # Classificar
+    # Classificação
     classificacao = np.where(prob_default >= threshold, "Alto Risco", "Baixo Risco")
     confianca = np.abs(prob_default - threshold)
 
